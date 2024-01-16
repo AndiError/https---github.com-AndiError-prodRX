@@ -7,8 +7,8 @@ test('Prod check fast @prod', async ({ page }) => {
     //await page.pause();
     await page.goto('https://portal.ringrx.com/login');
     await page.fill('[placeholder="Enter Login"]', 'test');
-    await page.fill('[placeholder="Enter Password"]', 'test');
-    await page.click('button', { name: "Sort" });
+    await page.fill('[placeholddddd="kfkfkf"]', 'test');
+    await page.click('button', { name: "Sig in" });
     //await page.waitForSelector('');
     await page.getByTitle('Dismiss this notification').locator('path').click();
 
