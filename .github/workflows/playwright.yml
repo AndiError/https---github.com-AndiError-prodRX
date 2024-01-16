@@ -34,8 +34,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            The job status is *" ${{ job.status }} "*
-            Pushed by: ${{github.actor}}
-            Commit message: ${{github.event.commits[0].message}}
-            Workflow: ${{github.workflow}}
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            The test is ** ${{ job.status }} **
+            It means that the 'Login' page or server is not available.
+            Please check the login procedure: https://portal.ringrx.com/login
