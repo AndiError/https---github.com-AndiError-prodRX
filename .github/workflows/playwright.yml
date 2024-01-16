@@ -34,8 +34,8 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            The job status is " ${{ job.status }} " 
-            Pushedd by: ${{github.actor}}
+            The job status is *" ${{ job.status }} "*
+            Pushed by: ${{github.actor}}
             Commit message: ${{github.event.commits[0].message}}
             Workflow: ${{github.workflow}}
             See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
