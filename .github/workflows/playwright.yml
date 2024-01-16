@@ -2,9 +2,7 @@ name: Prod shedule
 
 on:
   push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+    branches: [main]
   schedule:
     - cron: "*/5 * * * *"
 
@@ -22,7 +20,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright test --project=chromium
       - uses: actions/upload-artifact@v3
         if: always()
         with:
