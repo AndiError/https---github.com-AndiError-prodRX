@@ -1,6 +1,10 @@
 name: Prod shedule
 
 on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
   schedule:
     - cron: "*/5 * * * *"
 
